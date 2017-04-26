@@ -1,0 +1,18 @@
+
+:host {
+  display: flex;
+  /* the default flex direction is row */
+}
+
+.title-bar {
+  flex-grow: 1;
+  display: flex;
+  min-height: 80px;
+}
+
+.menu-area {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-right: 20px;
+}
