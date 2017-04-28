@@ -2,3 +2,6 @@
 body {
   font-family: 'Open Sans', sans-serif;
 }
+.user-title-bar {
+  background-color: #eee;
+}
