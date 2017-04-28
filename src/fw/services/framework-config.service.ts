@@ -22,7 +22,7 @@ export class FrameworkConfigService {
   showStatusBarBreakpoint = 0;
   socialIcons = new Array<IconFiles>();
 
-  constructor(settings: FrameworkConfigSettings) {
+  configure(settings: FrameworkConfigSettings): void {
     Object.assign(this, settings);
   }
 
