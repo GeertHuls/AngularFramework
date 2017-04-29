@@ -29,6 +29,7 @@ export class ScreenBelowLargeDirective implements OnDestroy {
   }
 
   ngOnDestroy() {
+    // prevents memory leaks
     this.screenSubscription.unsubscribe();
   }
 
