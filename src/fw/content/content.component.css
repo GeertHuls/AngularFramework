@@ -3,3 +3,9 @@
   background-color: #f0fff0;
   flex-grow: 1; /* will fill up all available space on the screen */
 }
+
+.body-style {
+  padding: 20px;
+  min-height: 100px;
+  flex-grow: 1;
+}
