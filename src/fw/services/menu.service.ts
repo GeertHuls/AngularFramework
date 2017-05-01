@@ -10,4 +10,5 @@ export interface MenuItem {
 @Injectable()
 export class MenuService {
   items: Array<MenuItem>;
+  isVertical = true;
 }

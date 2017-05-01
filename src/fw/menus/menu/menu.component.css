@@ -5,6 +5,17 @@
   flex-grow: 1;
 }
 
+:host(.vertical-menu) {
+  display: inline-block; /* inline-block because we want the menu
+                            to appear, then the content area
+                         */
+  width: 200px;
+  padding-left: 4px;
+  flex-grow: 0; /* the width is static 200px */
+  background-color: #555;
+  overflow: auto; /* shows scrollbar when needed */
+}
+
 ul {
   list-style-type: none;
   margin: 0;
