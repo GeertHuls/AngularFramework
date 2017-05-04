@@ -1,5 +1,6 @@
 <div *ngIf="!screenService.isLarge()" class="title-bar-small">
-  <span class="glyphicon glyphicon-menu-hamburger"></span>
+  <span class="glyphicon glyphicon-menu-hamburger"
+    (click)="menuService.toggleLeftSideMenu()"></span>
   <div class="small-image-holder">
     <img class="small-image" src="assets/logo.png">
   </div>
