@@ -13,6 +13,7 @@ import { CountryDetailComponent } from './country-detail/country-detail.componen
 import { CountryListComponent } from './country-list/country-list.component';
 import { CountryMaintComponent } from './country-maint/country-maint.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AuthenticatedUserComponent } from './authenticated-user/authenticated-user.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SettingsComponent,
     CountryDetailComponent,
     CountryListComponent,
-    CountryMaintComponent
+    CountryMaintComponent,
+    AuthenticatedUserComponent
   ],
   imports: [
     BrowserAnimationsModule,
