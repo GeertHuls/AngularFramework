@@ -12,6 +12,7 @@ import { appRoutes } from './app.routing';
 import { CountryDetailComponent } from './country-detail/country-detail.component';
 import { CountryListComponent } from './country-list/country-list.component';
 import { CountryMaintComponent } from './country-maint/country-maint.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CountryMaintComponent } from './country-maint/country-maint.component';
     CountryMaintComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
     HttpModule,

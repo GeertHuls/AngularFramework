@@ -19,6 +19,7 @@
   (mouseleave)="onPopupMouseLeave($event)"
   (mouseenter)="onPopupMouseEnter($event)"
   [style.left.px]="popupLeft"
-  [style.top.px]="popupTop">
+  [style.top.px]="popupTop"
+  @visibilityChanged>
 </fw-popup-menu>
 
