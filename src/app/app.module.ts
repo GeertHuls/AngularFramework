@@ -14,6 +14,8 @@ import { CountryListComponent } from './country-list/country-list.component';
 import { CountryMaintComponent } from './country-maint/country-maint.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthenticatedUserComponent } from './authenticated-user/authenticated-user.component';
+import { UserService } from './Services/user-service';
+import { UserApi } from '../fw/users/user-api';
 
 @NgModule({
   declarations: [
@@ -33,7 +35,10 @@ import { AuthenticatedUserComponent } from './authenticated-user/authenticated-u
     FwModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    UserService,
+    { provide: UserApi, useExisting: UserService }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
