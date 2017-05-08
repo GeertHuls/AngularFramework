@@ -9,7 +9,7 @@ export class UserService implements UserApi {
 
   isAuthenticated = false;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   signIn(username: string, password: string, rememberMe: boolean): Observable<any> {
     console.log('UserService.signIn: ' + username + ' ' + password + ' ' + rememberMe);
@@ -21,5 +21,11 @@ export class UserService implements UserApi {
     // Flatmap takes the original observable (x) and replaces it with another one (observable.throw).
     // You can't set a delay on an obserable.throws, hence the replacement with flatmap.
     //  .flatMap(x => Observable.throw('Invalid User Name and/or Password'));
+  }
+
+  signOut(): Observable<any> {
+    this.isAuthenticated = false;
+    this.router.navigate(['/signin']);
+    return Observable.of({});
   }
 }
