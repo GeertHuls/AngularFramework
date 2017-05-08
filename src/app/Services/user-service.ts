@@ -15,5 +15,11 @@ export class UserService implements UserApi {
     console.log('UserService.signIn: ' + username + ' ' + password + ' ' + rememberMe);
     this.isAuthenticated = true;
     return Observable.of({}).delay(2000);
+
+    // Simulate an error:
+    // return Observable.of({}).delay(2000)
+    // Flatmap takes the original observable (x) and replaces it with another one (observable.throw).
+    // You can't set a delay on an obserable.throws, hence the replacement with flatmap.
+    //  .flatMap(x => Observable.throw('Invalid User Name and/or Password'));
   }
 }
