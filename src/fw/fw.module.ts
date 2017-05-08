@@ -17,6 +17,7 @@ import { MenuItemComponent } from './menus/menu-item/menu-item.component';
 import { PopupMenuComponent } from './menus/popup-menu/popup-menu.component';
 import { SignInComponent } from './users/sign-in/sign-in.component';
 import { FormsModule } from '@angular/forms';
+import { RegisterUserComponent } from './users/register-user/register-user.component';
 
 @NgModule({
   imports: [
@@ -35,7 +36,8 @@ import { FormsModule } from '@angular/forms';
     MenuComponent,
     MenuItemComponent,
     PopupMenuComponent,
-    SignInComponent
+    SignInComponent,
+    RegisterUserComponent
   ],
   providers: [
     FrameworkConfigService,
