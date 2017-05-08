@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AuthenticatedUserComponent } from './authenticated-user/authenticated-user.component';
 import { UserService } from './Services/user-service';
 import { UserApi } from '../fw/users/user-api';
+import { AuthGuard } from './Services/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { UserApi } from '../fw/users/user-api';
   ],
   providers: [
     UserService,
-    { provide: UserApi, useExisting: UserService }
+    { provide: UserApi, useExisting: UserService },
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

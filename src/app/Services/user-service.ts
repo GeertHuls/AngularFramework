@@ -7,7 +7,7 @@ import { UserApi } from '../../fw/users/user-api';
 @Injectable()
 export class UserService implements UserApi {
 
-  isAuthenticated = true;
+  isAuthenticated = false;
 
   constructor() { }
 
