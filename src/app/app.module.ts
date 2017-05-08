@@ -17,6 +17,7 @@ import { AuthenticatedUserComponent } from './authenticated-user/authenticated-u
 import { UserService } from './Services/user-service';
 import { UserApi } from '../fw/users/user-api';
 import { AuthGuard } from './Services/auth-guard.service';
+import { AppDataService } from './Services/app-data-service';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { AuthGuard } from './Services/auth-guard.service';
   providers: [
     UserService,
     { provide: UserApi, useExisting: UserService },
-    AuthGuard
+    AuthGuard,
+    AppDataService
   ],
   bootstrap: [AppComponent]
 })
