@@ -39,7 +39,7 @@ export class AppDataService {
   deleteCountry(id: number): Observable<any> {
     // return Observable.of({}).delay(2000).flatMap(x=>Observable.throw('Delete error.'));
     return Observable.of({}).delay(2000)
-      .do(e => this.countries.splice(this.countries.findIndex(c => c.id === id), 1));
+      .do(e => this.countries.splice(this.countries.findIndex(c => c.id == id), 1));
   }
 
   getCountries(): Observable<any> {
@@ -47,12 +47,12 @@ export class AppDataService {
   }
 
   getCountry(id: number): Observable<Country> {
-    const country = this.countries.find(c => c.id === id);
+    const country = this.countries.find(c => c.id == id);
     return Observable.of(country);
   }
 
   updateCountry(updatedCountry: Country): Observable<any> {
-    const country = this.countries.find(c => c.id === updatedCountry.id);
+    const country = this.countries.find(c => c.id == updatedCountry.id);
     Object.assign(country, updatedCountry);
     return Observable.of(country).delay(2000);
     // return Observable.of({}).delay(2000).flatMap(x=>Observable.throw(''));
